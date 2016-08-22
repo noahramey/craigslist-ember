@@ -1,0 +1,10 @@
+<h3>New Category</h3>
+<form>
+  <div class="form-group">
+    <label for="title">Name:</label>
+    {{ input value=title id="title"}}
+  </div>
+
+  <button {{ action 'saveCategory' }}>Save</button>
+  <button {{ action 'cancelSaveCategory' }}>Clear</button>
+</form>
