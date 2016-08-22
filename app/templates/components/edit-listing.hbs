@@ -1,1 +1,29 @@
-{{yield}}
+{{#if updateListingForm}}
+  <form>
+    <div class="form-group">
+      <label for="author">Name:</label>
+      {{input value=author id="author" placeholder=listing.author}}
+    </div>
+    <div class="form-group">
+      <label for="title">Title:</label>
+      {{input value=title id="title" placeholder=listing.title}}
+    </div>
+    <div class="form-group">
+      <label for="content">Content:</label>
+      {{input value=content id="content" placeholder=listing.content}}
+    </div>
+    <div class="form-group">
+      <label for="location">Location:</label>
+      {{input value=location id="location" placeholder=listing.location}}
+    </div>
+    <div class="form-group">
+      <label for="image">Image URL:</label>
+      {{input value=image id="image" placeholder=listing.image}}
+    </div>
+
+    <button {{action 'updateListing' listing}}>Save</button>
+    <button {{action 'clearUpdateListing'}}>Cancel</button>
+  </form>
+{{else}}
+  <button {{action 'showUpdateForm'}}>Update Listing</button>
+{{/if}}

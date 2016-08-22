@@ -11,7 +11,7 @@ export default Ember.Component.extend({
         title: this.get('title'),
         author: this.get('author'),
         content: this.get('content'),
-        date: this.get('date'),
+        date: (new Date().getMonth() + 1) + "-" + (new Date().getDate()),
         location: this.get('location'),
         image: this.get('image'),
         category: this.get('category'),
@@ -21,7 +21,6 @@ export default Ember.Component.extend({
         this.set('title', '');
         this.set('author', '');
         this.set('content', '');
-        this.set('date', '');
         this.set('location', '');
         this.set('image', '');
         this.set('newListingForm', false);
@@ -29,7 +28,6 @@ export default Ember.Component.extend({
         this.set('title', '');
         this.set('author', '');
         this.set('content', '');
-        this.set('date', '');
         this.set('location', '');
         this.set('image', '');
         alert('Please fill out all fields before submitting your listing.');
@@ -39,7 +37,6 @@ export default Ember.Component.extend({
       this.set('title', '');
       this.set('author', '');
       this.set('content', '');
-      this.set('date', '');
       this.set('image', '');
       this.set('location', '');
       this.set('newListingForm', false);
